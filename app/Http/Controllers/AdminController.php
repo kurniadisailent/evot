@@ -14,6 +14,7 @@ class AdminController extends Controller
     	return view('admin.login');
     }
 
+    // Calon
     public function calon(){
     	return view('admin/calon.index');
     }
@@ -24,6 +25,19 @@ class AdminController extends Controller
 
     public function createcalon(){
         return view('admin/calon.create');
+    }
+
+    // pemilih
+    public function pemilih(){
+        return view('admin/pemilih.index');
+    }
+
+    public function editpemilih(){
+        return view('admin/pemilih.edit');
+    }
+
+    public function createpemilih(){
+        return view('admin/pemilih.create');
     }
 
 }

@@ -66,7 +66,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/pemilih">
           <i class="fas fa-fw fa-folder"></i>
           <span>Pemilih</span></a>
       </li>

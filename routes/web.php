@@ -33,3 +33,8 @@ Route::get('/dashboard', 'AdminController@dashboard');
 Route::get('/calon', 'AdminController@calon');
 Route::get('/editcalon', 'AdminController@editcalon');
 Route::get('/createcalon', 'AdminController@createcalon');
+
+// pemilih
+Route::get('/pemilih', 'AdminController@pemilih');
+Route::get('/editpemilih', 'AdminController@editpemilih');
+Route::get('/createpemilih', 'AdminController@createpemilih');

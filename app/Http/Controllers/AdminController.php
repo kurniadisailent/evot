@@ -40,4 +40,9 @@ class AdminController extends Controller
         return view('admin/pemilih.create');
     }
 
+    // laporan
+    public function laporan(){
+        return view('admin/laporan.index');
+    }
+
 }

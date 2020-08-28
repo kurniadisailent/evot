@@ -16,7 +16,9 @@
               <div class="card-body mt-3">
                 <div class="row">
 
-                  <div class="col-md-6"></div>
+                  <div class="col-md-6">
+                    <a href="" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Pemilih</a>
+                  </div>
 
                   <!-- Search -->
                   <div class="col-md-4 offset-md-2">

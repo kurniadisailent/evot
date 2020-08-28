@@ -38,3 +38,6 @@ Route::get('/createcalon', 'AdminController@createcalon');
 Route::get('/pemilih', 'AdminController@pemilih');
 Route::get('/editpemilih', 'AdminController@editpemilih');
 Route::get('/createpemilih', 'AdminController@createpemilih');
+
+// laporan
+Route::get('/laporan', 'AdminController@laporan');

@@ -73,7 +73,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/laporan">
           <i class="fas fa-fw fa-folder"></i>
           <span>Laporan</span></a>
       </li>

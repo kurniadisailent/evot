@@ -1,5 +1,9 @@
 /* home */
 
+.header {
+    background-color: #4ECDC4;
+}
+
 #navbar {
     background-color: #ffffff;
     box-shadow: 10px;
@@ -56,12 +60,12 @@
 }
 
 #iconcopy {
-    color: #999999;
+    color: #ffffff;
 }
 
 #copy{
     font-family: "Mregular";
-    color: #999999;
+    color: #ffffff;
     font-size: 13px;
 }
 

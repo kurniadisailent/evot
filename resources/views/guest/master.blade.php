@@ -16,7 +16,10 @@
     <title>SMPN 1 KALIPUCANG</title>
 </head>
 <body class="bg-light">
-	<nav id="navbar" class="navbar navbar-expand-lg mb-5 shadow-sm">
+    <div class="header">
+        <img src="{{ url('images/haeder.png') }}" class="" width="200px">
+    </div>
+	<nav id="navbar" class="navbar navbar-expand-lg mb-4 shadow-sm">
 	  <a class="navbar-brand text-info" id="sb" href="#"><b>E-voting</b></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"><i class="text-dark fa fa-bars"></i></span>
@@ -39,7 +42,7 @@
 
     <!-- footer -->
     <!-- Footer -->
-    <footer class="page-footer font-small mt-5 blue bg-dark ">
+    <footer class="page-footer font-small mt-5 blue bg-secondary">
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">
       	<i class="fa fa-copyright" id="iconcopy"></i><span id="copy"> Copyright 2020 | Powered by Kelompok 5 PKL RPL SMKN 1 Padaherang</span>

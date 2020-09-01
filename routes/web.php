@@ -39,5 +39,10 @@ Route::get('/pemilih', 'AdminController@pemilih');
 Route::get('/editpemilih', 'AdminController@editpemilih');
 Route::get('/createpemilih', 'AdminController@createpemilih');
 
+// admin
+Route::get('/admin', 'AdminController@admin');
+Route::get('/editadmin', 'AdminController@editadmin');
+Route::get('/createadmin', 'AdminController@createadmin');
+
 // laporan
 Route::get('/laporan', 'AdminController@laporan');

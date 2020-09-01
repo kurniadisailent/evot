@@ -41,7 +41,7 @@
                       <div class="card-footer">
                         <div class="row">
                           <div class="col-md-6">
-                            <a href="" class="btn btn-block btn-success"><span class="text-light"><i class="fa fa-edit"></i> Edit</span></a>
+                            <a href="/editcalon" class="btn btn-block btn-success"><span class="text-light"><i class="fa fa-edit"></i> Edit</span></a>
                           </div>
                           <div class="col-md-6">
                             <a href="" class="btn btn-block btn-danger"><span class="text-light"><i class="fa fa-trash"></i> Hapus</span></a>

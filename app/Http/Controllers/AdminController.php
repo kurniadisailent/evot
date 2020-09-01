@@ -40,6 +40,19 @@ class AdminController extends Controller
         return view('admin/pemilih.create');
     }
 
+    // admin
+    public function admin(){
+        return view('admin/admin.index');
+    }
+
+    public function editadmin(){
+        return view('admin/admin.edit');
+    }
+
+    public function createadmin(){
+        return view('admin/admin.create');
+    }
+
     // laporan
     public function laporan(){
         return view('admin/laporan.index');

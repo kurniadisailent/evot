@@ -17,7 +17,7 @@
                 <div class="row">
 
                   <div class="col-md-6">
-                    <a href="" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Pemilih</a>
+                    <a href="/createpemilih" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Pemilih</a>
                   </div>
 
                   <!-- Search -->
@@ -55,7 +55,7 @@
                           <td>user</td>
                           <td>Memilih</td>
                           <td>
-                          <a href="" class="btn btn-sm btn-warning">
+                          <a href="/editpemilih" class="btn btn-sm btn-warning">
                             <i class="fas fa-edit"></i>
                           </a>
                           <button class="btn btn-sm btn-danger tombol-hapus" type="button" data-url="">

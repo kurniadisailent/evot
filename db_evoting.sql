@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Sep 2020 pada 05.54
+-- Waktu pembuatan: 03 Sep 2020 pada 02.27
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.8
 
@@ -34,7 +34,7 @@ CREATE TABLE `tbl_admin` (
   `password` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `remember_token` varchar(100) NOT NULL
+  `remember_token` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -42,11 +42,11 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id_admin`, `nama_admin`, `username`, `password`, `created_at`, `updated_at`, `remember_token`) VALUES
-(1, 'Keyshawn Nader', 'wunsch.madelyn', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'caYJM3Kf9X'),
 (2, 'Sienna Bergstrom', 'steuber.doyle', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'Zz9TXcbz9k'),
 (3, 'Zaria O\'Conner', 'leland41', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'FipEa2czcE'),
 (4, 'Darwin Kessler', 'bcrist', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'tx1kuha5ym'),
-(5, 'Mafalda Feeney DDS', 'nakia.turner', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'pB9st2JbWN');
+(5, 'Mafalda Feeney DDS', 'nakia.turner', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'pB9st2JbWN'),
+(7, 'testt', 'MinerAndCraftPE', '$2y$10$KGzoJrE8e62EV7wkuVGKq.Mr.Be9lFcqU2n5.yBCL5kpn6dEDywra', '2020-09-01 17:49:11', '2020-09-01 17:49:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -60,20 +60,20 @@ CREATE TABLE `tbl_calon` (
   `nama_wakil` varchar(100) NOT NULL,
   `kelas_ketua` varchar(20) NOT NULL,
   `kelas_wakil` varchar(20) NOT NULL,
-  `foto` text NOT NULL,
+  `foto_ketua` text NOT NULL,
+  `foto_wakil` text NOT NULL,
   `visi` text NOT NULL,
   `misi` text NOT NULL,
-  `jumlah_suara` int(11) NOT NULL
+  `jumlah_suara` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tbl_calon`
 --
 
-INSERT INTO `tbl_calon` (`id_calon`, `nama_ketua`, `nama_wakil`, `kelas_ketua`, `kelas_wakil`, `foto`, `visi`, `misi`, `jumlah_suara`) VALUES
-(1, 'Dr. Lilla Schinner', 'Diego Daugherty DDS', 'XII RPL C', 'XII RPL A', 'noimg.png', 'Ducimus non vel voluptas animi facilis dolores molestiae officiis. Minima vitae odio placeat. Culpa tenetur quia consequatur sapiente dolor consequuntur ut.', 'Voluptate iure et cum necessitatibus. Sit quis nostrum quaerat temporibus aliquam qui ut. Explicabo accusamus provident laborum qui rerum necessitatibus.', 0),
-(2, 'Tomas Marks', 'Ross McDermott', 'XII RPL C', 'XII RPL C', 'noimg.png', 'Vel maiores veritatis nihil et possimus laboriosam. Ullam ut vitae vero est. Enim aperiam ea consequatur ad omnis. Aut id corporis aspernatur quae praesentium architecto aliquam.', 'Consequuntur et impedit asperiores aperiam. Debitis aliquam illum quia autem facere doloremque vitae. Ut sit optio qui dolorem.', 0),
-(3, 'Deron Abbott', 'Adaline Brown', 'XII RPL A', 'XII RPL B', 'noimg.png', 'Et autem tenetur commodi sit excepturi quam magnam. Ratione numquam voluptatem ipsam qui. Officiis a itaque commodi minima dolores. Dicta a autem quibusdam ratione reiciendis.', 'Ut qui eaque nesciunt adipisci. Voluptatem occaecati deserunt ut officiis officiis voluptas. Esse earum atque autem ut at dolor quisquam. Quo eos ipsum doloribus delectus culpa vel.', 0);
+INSERT INTO `tbl_calon` (`id_calon`, `nama_ketua`, `nama_wakil`, `kelas_ketua`, `kelas_wakil`, `foto_ketua`, `foto_wakil`, `visi`, `misi`, `jumlah_suara`) VALUES
+(6, 'Qud\'a La\'ut', 'Madara Nambawan', 'XII RPL A', 'XII RPL A', 'foto_ketua_1599011642.jpg', 'foto_wakil_1599011642.jpg', 'Menjadikan Semua orang dapat berenang dan berperang', 'Menjadikan manusia yang dan santai seperti Air laut namun serius dan tekun seperti berperang', NULL),
+(7, 'MinerFamz', 'GwJadiNgri', 'XII RPL A', 'XII RPL B', 'foto_ketua_1599012902.png', 'foto_wakil_1599012902.png', 'Lorem ipsum Dolor Sit Amet  Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet', 'Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet Lorem ipsum Dolor Sit Amet', NULL);
 
 -- --------------------------------------------------------
 
@@ -233,13 +233,13 @@ ALTER TABLE `tbl_pemilih`
 -- AUTO_INCREMENT untuk tabel `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_calon`
 --
 ALTER TABLE `tbl_calon`
-  MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pemilih`

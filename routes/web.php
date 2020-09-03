@@ -27,10 +27,11 @@ Route::get('/profile', 'GuestController@profile');
 Route::get('/login', 'AdminController@login');
 
 // admin
-Route::get('/dashboard', 'AdminController@dashboard');
+route::get('/dashboard','AdminController@dashboard');
+Route::resource('admin', 'AdminController');
 
 // calon
-Route::get('/calon', 'AdminController@calon');
+Route::resource('calon', 'CalonController');
 Route::get('/editcalon', 'AdminController@editcalon');
 Route::get('/createcalon', 'AdminController@createcalon');
 
@@ -39,10 +40,6 @@ Route::get('/pemilih', 'AdminController@pemilih');
 Route::get('/editpemilih', 'AdminController@editpemilih');
 Route::get('/createpemilih', 'AdminController@createpemilih');
 
-// admin
-Route::get('/admin', 'AdminController@admin');
-Route::get('/editadmin', 'AdminController@editadmin');
-Route::get('/createadmin', 'AdminController@createadmin');
 
 // laporan
 Route::get('/laporan', 'AdminController@laporan');

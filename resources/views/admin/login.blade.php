@@ -39,10 +39,16 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
                   </div>
-                  <form class="user" method="" action="/dashboard">
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." autocomplete="off">
+                  @if(session('gagal'))
+                  <div class="alert alert-danger alert-dismissible fade show">
 
+                      <strong>Gagal ! </strong>{{ session('gagal')}}.
+                  </div>
+                  @endif
+                  <form class="user" method="POST" action="/admin/login">
+                  {{ csrf_field() }}
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="email" name="username" placeholder="Enter Username" autocomplete="off">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">

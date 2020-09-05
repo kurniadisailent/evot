@@ -42,7 +42,7 @@
               <div class="card-body mt-3">
                 <div class="row justify-content-center">
                   <div class="col-md-11 mb-5">
-                    <a href="/createcalon" class="btn btn-primary px-3"><i class="fa fa-plus"></i> Tambah calon</a>
+                    <a href="{{route('calon.create')}}" class="btn btn-primary px-3"><i class="fa fa-plus"></i> Tambah calon</a>
                   </div>
                   <?php $no = 1 ?>
                   @foreach($data as $row)

@@ -89,7 +89,8 @@
                       </tbody>
                     </table>
                   </div>
-                </div>  
+                </div> 
+                {!! $data->links() !!} 
               </div>
             </div>
         </div>

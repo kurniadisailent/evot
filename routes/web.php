@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin','middleware' => ['auth:admin']], function() {
     // calon
     Route::resource('calon', 'CalonController');
     // pemilih
-    Route::get('/pemilih', 'AdminController@pemilih');
+    Route::resource('pemilih', 'PemilihController');
     Route::get('/editpemilih', 'AdminController@editpemilih');
     Route::get('/createpemilih', 'AdminController@createpemilih');
     // laporan

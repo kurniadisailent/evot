@@ -16,32 +16,43 @@
               <div class="card-body mt-3">
                 <div class="row">
                   <div class="col-md-12">
-                    <form>
+                    <form method="POST" action="{{ route('pemilih.update',['pemilih'=>$data->id_pemilih]) }}">
+                  @csrf
+                  @method('PUT')
                               <!-- Nama -->
                       <div class="form-group row">
                         <label for="Nama" class="col-md-3 col-form-label col-form-label-md">Nama Pemilih</label>
                         <div class="col-md-7">
-                          <input type="text" name="Nama Pemilih" class="form-control form-control-md border " id="colFormLabelSm" placeholder="Masukan Nama Pemilih">
+                          <input value="{{ old('nama_pemilih',$data->nama_pemilih) }}" type="text" name="nama_pemilih" class="form-control form-control-md border @error('nama_pemilih') is-invalid @enderror" id="colFormLabelSm" placeholder="Masukan Nama Pemilih" required>
+                          @error('nama_pemilih')
+                              <div class="invalid-feedback">
+                                {{ $message }}
+                              </div>
+                          @enderror
                         </div>
                       </div>
 
-                      <!-- Kelas -->
                       <div class="form-group row">
-                        <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">Kelas Pemilih</label>
+                        <label for="Nama" class="col-md-3 col-form-label col-form-label-md">Kelas Pemilih</label>
                         <div class="col-md-7">
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>VII</option>
-                            <option>VIII</option>
-                            <option>IX</option>
-                          </select>
+                          <input value="{{ old('kelas_pemilih',$data->kelas_pemilih) }}" type="text" name="kelas_pemilih" class="form-control form-control-md border @error('kelas_pemilih') is-invalid @enderror" id="colFormLabelSm" placeholder="Masukan Nama Pemilih" required>
+                          @error('kelas_pemilih')
+                              <div class="invalid-feedback">
+                                {{ $message }}
+                              </div>
+                          @enderror
                         </div>
                       </div>
-
                        <!-- jenis -->
                       <div class="form-group row">
                         <label for="jenis" class="col-md-3 col-form-label col-form-label-md">Jenis Kelamin</label>
                         <div class="col-md-7">
-                          <input type="text" name="Jenis Kelamin" class="form-control form-control-md border " id="colFormLabelSm" value="" placeholder="Masukan Jenis Kelamin">
+                          <input value="{{ old('jenis_kelamin',$data->jenis_kelamin) }}" type="text" name="jenis_kelamin" class="form-control form-control-md border @error('jenis_kelamin') is-invalid @enderror " id="colFormLabelSm" value="" placeholder="Masukan Jenis Kelamin" required>
+                          @error('jenis_kelamin')
+                              <div class="invalid-feedback">
+                                {{ $message }}
+                              </div>
+                          @enderror
                         </div>
                       </div>
 
@@ -49,7 +60,12 @@
                       <div class="form-group row">
                         <label for="username" class="col-md-3 col-form-label col-form-label-md">Username</label>
                         <div class="col-md-7">
-                          <input type="text" name="Username" class="form-control form-control-md border " id="colFormLabelSm" value="" placeholder="Masukan Username">
+                          <input value="{{ old('username',$data->username) }}" type="text" name="username" class="form-control form-control-md border @error('username') is-invalid @enderror " id="colFormLabelSm" value="" placeholder="Masukan Username" required>
+                          @error('username')
+                              <div class="invalid-feedback">
+                                {{ $message }}
+                              </div>
+                          @enderror
                         </div>
                       </div>
 
@@ -57,7 +73,7 @@
                       <div class="form-group row">
                         <label for="Password" class="col-md-3 col-form-label col-form-label-md">Password</label>
                         <div class="col-md-7">
-                          <input type="Password" name="Password" class="form-control form-control-md border " id="colFormLabelSm" value="" placeholder="Masukan Password">
+                          <input type="Password" name="password" class="form-control form-control-md border" id="colFormLabelSm" value="" placeholder="Masukan Password" >
                         </div>
                       </div>
                       
@@ -65,7 +81,7 @@
                       <div class="form-group row">
                         <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">status</label>
                         <div class="col-md-7">
-                          <select class="form-control" id="exampleFormControlSelect1">
+                          <select value="{{ old('status',$data->status) }}" name="status" class="form-control" id="exampleFormControlSelect1">
                             <option>MEMILIH</option>
                             <option>BELUM MEMILIH</option>
                           </select>

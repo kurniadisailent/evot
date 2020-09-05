@@ -66,7 +66,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="admin/pemilih">
+        <a class="nav-link" href="{{route('pemilih.index')}}">
           <i class="fas fa-fw fa-folder"></i>
           <span>Pemilih</span></a>
       </li>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Sep 2020 pada 02.27
+-- Waktu pembuatan: 05 Sep 2020 pada 05.14
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.8
 
@@ -42,7 +42,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id_admin`, `nama_admin`, `username`, `password`, `created_at`, `updated_at`, `remember_token`) VALUES
-(2, 'Sienna Bergstrom', 'steuber.doyle', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'Zz9TXcbz9k'),
+(2, 'Sienna Bergstrom', 'steuber.doyle', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', '1AdKtO7Jgbj3JpF4qie2uzPtteOuhM8VcASKbBoMign9TAsSrHm2NdC88j3S'),
 (3, 'Zaria O\'Conner', 'leland41', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'FipEa2czcE'),
 (4, 'Darwin Kessler', 'bcrist', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'tx1kuha5ym'),
 (5, 'Mafalda Feeney DDS', 'nakia.turner', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'pB9st2JbWN'),
@@ -233,13 +233,13 @@ ALTER TABLE `tbl_pemilih`
 -- AUTO_INCREMENT untuk tabel `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_calon`
 --
 ALTER TABLE `tbl_calon`
-  MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pemilih`

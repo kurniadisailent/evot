@@ -69,6 +69,7 @@ class CalonController extends Controller
             'foto_wakil'=>$nama_foto_wakil,
             'visi'=>$request->visi,
             'misi'=>$request->misi,
+            'jumlah_suara'=>'0',
         ]);
 
         return redirect()->route('calon.index')->with('store','Berhasil disimpan!');

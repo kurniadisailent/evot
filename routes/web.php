@@ -25,6 +25,7 @@ Route::get('/profile', 'GuestController@profile');
 
 
 // login admin
+Route::get('admin/', 'AdminLoginController@getLogin')->middleware('guest');
 Route::get('admin/login', 'AdminLoginController@getLogin')->middleware('guest')->name('admin.login');
 Route::post('admin/login', 'AdminLoginController@postLogin');
 Route::get('admin/logout', 'AdminLoginController@Logout')->name('logout');
@@ -40,15 +41,13 @@ Route::group(['prefix' => 'admin','middleware' => ['auth:admin']], function() {
     Route::get('/editpemilih', 'AdminController@editpemilih');
     Route::get('/createpemilih', 'AdminController@createpemilih');
     // laporan
-    Route::get('/admin/laporan', 'AdminController@laporan');
+    Route::get('laporan','LaporanController@index')->name('laporan.index');
     // dashboard
     route::get('dashboard','DashboardController@index')->name('dashboard.index');
     // admin
     Route::resource('admin', 'AdminController');
     // calon
     Route::resource('calon', 'CalonController');
-    // laporan
-    Route::get('/laporan', 'AdminController@laporan');
 });
 
 

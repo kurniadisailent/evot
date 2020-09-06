@@ -15,7 +15,7 @@
   <div class="row">
 
     <!-- Area Chart -->
-    <div class="col-xl-8 col-lg-7">
+    <div class="col-xl-12 col-lg-12">
     	<div class="row">
     	<!-- Earnings (Monthly) Card Example -->
     	<div class="col-xl-6 col-md-6 mb-4">
@@ -26,7 +26,7 @@
     	          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Sudah Memilih</div>
     	          <div class="row no-gutters align-items-center">
     	            <div class="col-auto">
-    	              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">500 Siswa</div>
+    	              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$S_Memilih}} Siswa</div>
     	            </div>
     	          </div>
     	        </div>
@@ -46,7 +46,7 @@
     	          <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Belum memilih</div>
     	          <div class="row no-gutters align-items-center">
     	            <div class="col-auto">
-    	              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">400 Siswa</div>
+    	              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$B_Memilih}} Siswa</div>
     	            </div>
        	          </div>
     	        </div>
@@ -63,59 +63,66 @@
           <h6 class="m-0 font-weight-bold text-primary">Progress</h6>
         </div>
         <div class="card-body">
-          <h4 class="small font-weight-bold">Siswa yang sudah memilih <span class="float-right">60%</span></h4>
+          <h4 class="small font-weight-bold">Siswa yang sudah memilih <span class="float-right">{{$PS_Memilih}}%</span></h4>
           <div class="progress mb-4">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: {{$PS_Memilih}}%" aria-valuenow="{{$PS_Memilih}}" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <h4 class="small font-weight-bold">Siswa yang belum memilih <span class="float-right">40%</span></h4>
+          <h4 class="small font-weight-bold">Siswa yang belum memilih <span class="float-right">{{$PB_Memilih}}%</span></h4>
           <div class="progress mb-4">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-danger" role="progressbar" style="width: {{$PB_Memilih}}%" aria-valuenow="{{$PB_Memilih}}" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
       </div>
     </div>
+    <figure class="highcharts-figure col-md-12">
+    <div id="container"></div>
+    <p class="highcharts-description">
 
-    <!-- Pie Chart -->
-    <div class="col-xl-4 col-lg-5">
-      <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">Diagram</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-              <div class="dropdown-header">Dropdown Header:</div>
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card Body -->
-        <div class="card-body">
-          <div class="chart-pie pt-4 pb-2">
-            <canvas id="myPieChart"></canvas>
-          </div>
-          <div class="mt-4 text-center small">
-            <span class="mr-2">
-              <i class="fas fa-circle text-success"></i> Urut 1
-            </span>
-            <span class="mr-2">
-              <i class="fas fa-circle text-primary"></i> Urut 2
-            </span>
-            <span class="mr-2">
-              <i class="fas fa-circle text-danger"></i> Golput
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </p>
 
- 
-</div>
+    <table class="table" id="datatable">
+        <thead>
+            <tr>
+                <th>CALON</th>
+                <th>Pemilih</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($data_tabel as $dat)
+            <tr>
+                <th>{{$dat->nama_ketua}} & {{$dat->nama_wakil}}</th>
+                <td>{{$dat->jumlah_suara}}</td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</figure>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+  data: {
+    table: 'datatable'
+  },
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: 'Data extracted from a HTML table in the page'
+  },
+  yAxis: {
+    allowDecimals: false,
+    title: {
+      text: 'Units'
+    }
+  },
+  tooltip: {
+    formatter: function() {
+      return '<b>' + this.series.name + '</b><br/>' +
+        this.point.y + ' ' + this.point.name.toLowerCase();
+    }
+  }
+});
+
+</script>
 
 @endsection

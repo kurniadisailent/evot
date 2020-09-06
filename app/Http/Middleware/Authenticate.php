@@ -18,7 +18,7 @@ class Authenticate extends Middleware
     {
         if (Auth::guard('admin')->check()) {
 
-            return redirect('admin/dashboard');
+            return redirect('admin/');
       
         } 
     }

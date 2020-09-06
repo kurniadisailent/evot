@@ -86,13 +86,12 @@
                         <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">status</label>
                         <div class="col-md-7">
                           <select name="status" class="form-control" id="exampleFormControlSelect1">
-                            <option>MEMILIH</option>
-                            <option>BELUM MEMILIH</option>
+                            <option value = "MEMILIH">MEMILIH</option>
+                            <option value = "BELUM">BELUM</option>
                           </select>
                         </div>
                       </div>
                       <button class="btn btn-danger px-4">submit</button>
-
                     </form>
                   </div>
                 </div>  

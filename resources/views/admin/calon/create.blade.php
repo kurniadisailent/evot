@@ -33,10 +33,7 @@
                     </div>
                   @enderror
                 </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="foto_wakil" class="col-md-2 col-form-label col-form-label-md">Foto wakil</label>
+                <label for="foto_wakil" class="col-md-2 offset-1 col-form-label col-form-label-md">Foto wakil</label>
                 <div class="custom-file col-md-3 ml-1">
                   <input type="file" class="form-control @error('foto_wakil') is-invalid @enderror " id="inputGambar_wakil" placeholder=" masukan file gambar buku" name="foto_wakil">
                   <label class="custom-file-label ml-2" for="inputGambar_wakil">Pilih Gambar</label>
@@ -46,6 +43,10 @@
                     </div>
                   @enderror
                 </div>
+              </div>
+
+              <div class="form-group row">
+                
               </div>
 
               <!-- Nama -->

@@ -54,9 +54,7 @@
                   </form>
                   <hr>
                   
-                  <div class="text-center">
-                    <p class="small">Belum punya akun?<a class="mr-1" href="/regis"> Buat akun sekarang!</a></p>
-                  </div>
+                  
                 </div>
               </div>
             </div>

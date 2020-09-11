@@ -51,6 +51,21 @@ return [
             'driver' => 'session',
             'provider' => 'admin',
           ],
+
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admin',
+        ],
+
+        'pemilih' => [
+            'driver' => 'session',
+            'provider' => 'pemilih',
+          ],
+  
+        'pemilih-api' => [
+            'driver' => 'token',
+            'provider' => 'pemilih',
+        ],
     ],
 
     /*
@@ -79,7 +94,12 @@ return [
         'admin' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
-          ],
+        ],
+
+        'pemilih' => [
+            'driver' => 'eloquent',
+            'model' => App\Pemilih::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',

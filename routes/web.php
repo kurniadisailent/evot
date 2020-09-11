@@ -13,15 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guest.loginuser');
-});
+// login guest
+Route::get('/login', 'PemilihLoginController@getLogin')->middleware('guest')->name('guest.loginuser');
+Route::post('/login', 'PemilihLoginController@postLogin');
+Route::get('/logout', 'PemilihLoginController@logout');;
 // login guest
 Route::get('/regis', 'GuestController@regis');
 Route::get('/home', 'GuestController@home');
-
 // guest
 Route::get('/profile', 'GuestController@profile');
+
+Route::group(['middleware' => ['auth:pemilih']], function() {
+//Pemilihan
+    Route::get('/','PemilihanController@index')->name('voting');
+    route::post('/vote/{vote}/{pemilih}','PemilihanController@vote')->name('pemilihan.vote');
+});
 
 
 // login admin

@@ -37,12 +37,18 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
+                    <h1 class="h4 text-gray-900 mb-4">LOGIN PEMILIH</h1>
                   </div>
-                  <form class="user" method="" action="/home">
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." autocomplete="off">
+                  @if(session('gagal'))
+                  <div class="alert alert-danger alert-dismissible fade show">
 
+                      <strong>Gagal ! </strong>{{ session('gagal')}}.
+                  </div>
+                  @endif
+                  <form class="user" method="POST" action="/login">
+                  {{ csrf_field() }}
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="email" name="username" placeholder="Enter Username" autocomplete="off">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
@@ -53,8 +59,6 @@
                     </button>
                   </form>
                   <hr>
-                  
-                  
                 </div>
               </div>
             </div>

@@ -18,10 +18,17 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard('admin')->check()) 
-        {
-            return redirect('admin/dashboard');
-        } 
+        if($request->is('admin/*')){
+            if (Auth::guard('admin')->check()) 
+            {
+                return redirect('admin/dashboard');
+            } 
+        }elseif ($request->is('/*')) {
+            if (Auth::guard('pemilih')->check()) 
+            {
+                return redirect('/');
+            } 
+        }
 
         return $next($request);
     }

@@ -27,10 +27,7 @@
 	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 	    <ul class="navbar-nav">
 	      <li class="nav-item active">
-	        <a href="/profile" class="text-secondary mr-3"><i class="fa fa-user"></i></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a href="" class="text-secondary"><i class="fas fa-sign-out-alt"></i></a>
+	        <a href="/logout" class="text-secondary"><i class="fas fa-sign-out-alt"></i></a>
 	      </li>
 	    </ul>
 	  </div>
@@ -55,6 +52,12 @@
     <script type="text/javascript" src="{{ url('js/jquery.slim.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('js/pooper.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('icon/js/fontawesome.min.js') }}"></script>
+
+    @stack('modal')
+    <script src="{{url('js/jquery.slim.min.js')}}"></script>
+    <script src="{{url('js/popper.min.js')}}"></script>
+    <script src="{{url('js/bootstrap.min.js')}}"></script>
+    @stack('js')
 
     </body>
 </html>

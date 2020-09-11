@@ -16,10 +16,16 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (Auth::guard('admin')->check()) {
+        $uri = $request->path();
 
-            return redirect('admin/');
-      
-        } 
+        if($request->is('admin/*')){
+            if (Auth::guard('admin')->check()) {
+                return redirect('admin/');
+            } 
+        }elseif ($request->is('/*')) {
+            if (Auth::guard('pemilih')->check()) {
+                return redirect('/');
+            } 
+        }
     }
 }

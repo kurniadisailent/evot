@@ -63,7 +63,7 @@ class Handler extends ExceptionHandler
 
       if($request->is('admin/*')){
         return redirect('admin/login');
-      }elseif($request->is('admin/*')){
+      }elseif($request->is('/*')){
         return redirect('/login');
       }
       

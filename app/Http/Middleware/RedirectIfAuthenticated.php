@@ -23,13 +23,12 @@ class RedirectIfAuthenticated
             {
                 return redirect('admin/dashboard');
             } 
-        }elseif ($request->is('/*')) {
+        }elseif($request->is('/*')) {
             if (Auth::guard('pemilih')->check()) 
             {
-                return redirect('/');
+                return redirect()->route('voting');
             } 
         }
-
         return $next($request);
     }
 }

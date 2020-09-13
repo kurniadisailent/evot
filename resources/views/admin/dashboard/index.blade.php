@@ -6,7 +6,8 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <h1 class="h3 mb-0 text-gray-800">Laporan</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
   </div>
 
   <!-- Content Row -->
@@ -14,7 +15,7 @@
   <div class="row">
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-7">
+    <div class="col-xl-12 col-lg-12">
     	<div class="row">
     	<!-- Earnings (Monthly) Card Example -->
     	<div class="col-xl-6 col-md-6 mb-4">
@@ -73,10 +74,59 @@
         </div>
       </div>
     </div>
+<figure class="highcharts-figure col-md-12">
+    <div id="container"></div>
+    <p class="highcharts-description">
 
-  </div>
+    </p>
 
- 
-</div>
+    <table class="table" id="datatable">
+        <thead>
+            <tr>
+                <th>CALON</th>
+                <th>Pemilih</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($data_tabel as $dat)
+            <tr>
+                <th>{{$dat->nama_ketua}} & {{$dat->nama_wakil}}</th>
+                <td>{{$dat->jumlah_suara}}</td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</figure>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+  data: {
+    table: 'datatable'
+  },
+  
+  chart: {
+    type: 'pie'
+  },
+  exporting: {
+         enabled: false
+},
+  title: {
+    text: 'Data extracted from a HTML table in the page'
+  },
+  yAxis: {
+    allowDecimals: false,
+    title: {
+      text: 'Units'
+    }
+  },
+  tooltip: {
+    formatter: function() {
+      return '<b>' + this.series.name + '</b><br/>' +
+        this.point.y + ' ' + this.point.name.toLowerCase();
+    }
+  }
+});
+
+</script>
 
 @endsection

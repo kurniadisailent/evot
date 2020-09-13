@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Sep 2020 pada 06.41
+-- Waktu pembuatan: 13 Sep 2020 pada 09.05
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.8
 
@@ -100,10 +100,10 @@ CREATE TABLE `tbl_pemilih` (
 --
 
 INSERT INTO `tbl_pemilih` (`id_pemilih`, `nama_pemilih`, `kelas_pemilih`, `jenis_kelamin`, `username`, `password`, `status`, `created_at`, `updated_at`, `remember_token`) VALUES
-(1, 'Bernardo Batz', 'XII RPL A', 'Laki-Laki', 'dmclaughlin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MEMILIH', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'ZO6E3hNbVVoix8uks0LcLD0nbrJzNjaQw7mGL8HgAdPbKACx4tHwcOYva6SB'),
+(1, 'Bernardo Batz', 'XII RPL A', 'Laki-Laki', 'dmclaughlin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MEMILIH', '2020-08-31 20:45:53', '2020-08-31 20:45:53', '0szj2zCZHslJvoBTtTpXLUp9agGpSwwSfKHhjZfcX5h0qewTJqoahIsQ6o3n'),
 (2, 'Sage Langworth', 'XII RPL A', 'Laki-Laki', 'tabitha78', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MEMILIH', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'axx5uH9UyBCH8tjY3ShuVXXjfnCNdIdmS6iorQRtqRfiKsFTOdEgGdW7gjt2'),
 (3, 'Miss Berniece Sawayn II', 'XII RPL B', 'Laki-Laki', 'gustave.ullrich', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MEMILIH', '2020-08-31 20:45:53', '2020-08-31 20:45:53', '1esQ4RuS76'),
-(4, 'Mr. Torrance Krajcik Sr.', 'XII RPL B', 'Perempuan', 'cassandre65', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BELUM', '2020-08-31 20:45:53', '2020-08-31 20:45:53', '7xxjIHl5o6'),
+(4, 'Mr. Torrance Krajcik Sr.', 'XII RPL B', 'Perempuan', 'cassandre65', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MEMILIH', '2020-08-31 20:45:53', '2020-08-31 20:45:53', '55llmMQsjTIBqvDKlR5e1OSVharmW4lmvI3qBmaDefz7YziW97z7eymNJCnv'),
 (5, 'Jaylin Pagac', 'XII RPL B', 'Laki-Laki', 'dfeil', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BELUM', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'YytrUJ7G5r'),
 (6, 'Pasquale Hettinger', 'XII RPL C', 'Laki-Laki', 'ebauch', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BELUM', '2020-08-31 20:45:53', '2020-08-31 20:45:53', 'LS0TQ1SYMy'),
 (7, 'Jamar Beier', 'XII RPL C', 'Perempuan', 'emerson.kilback', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BELUM', '2020-08-31 20:45:53', '2020-08-31 20:45:53', '0epxXMmrk4'),
@@ -240,7 +240,7 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT untuk tabel `tbl_calon`
 --
 ALTER TABLE `tbl_calon`
-  MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pemilih`

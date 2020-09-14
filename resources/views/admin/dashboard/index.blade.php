@@ -96,7 +96,10 @@
         @endforeach
         </tbody>
     </table>
-</figure>
+  </figure>
+  </div>
+</div>
+
 
 <script type="text/javascript">
 Highcharts.chart('container', {

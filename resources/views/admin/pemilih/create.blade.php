@@ -34,7 +34,7 @@
                       <div class="form-group row">
                         <label for="Nama" class="col-md-3 col-form-label col-form-label-md">Kelas Pemilih</label>
                         <div class="col-md-7">
-                          <input type="text" name="kelas_pemilih" class="form-control form-control-md border @error('kelas_pemilih') is-invalid @enderror" id="colFormLabelSm" placeholder="Masukan Nama Pemilih" required>
+                          <input type="text" name="kelas_pemilih" class="form-control form-control-md border @error('kelas_pemilih') is-invalid @enderror" id="colFormLabelSm" placeholder="Masukan Kelas Pemilih" required>
                           @error('kelas_pemilih')
                               <div class="invalid-feedback">
                                 {{ $message }}
@@ -47,8 +47,8 @@
                         <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">Jenis Kelamin</label>
                         <div class="col-md-7">
                           <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
-                            <option>LAKI-LAKI</option>
-                            <option>PEREMPUAN</option>
+                            <option value="Laki-Laki">LAKI-LAKI</option>
+                            <option value="Perempuan">PEREMPUAN</option>
                           </select>
                         </div>
                       </div>

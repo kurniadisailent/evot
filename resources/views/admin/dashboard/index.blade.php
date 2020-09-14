@@ -113,7 +113,7 @@ Highcharts.chart('container', {
          enabled: false
 },
   title: {
-    text: 'Data extracted from a HTML table in the page'
+    text: 'Jumlah Suara Dari masing masing Calon'
   },
   yAxis: {
     allowDecimals: false,

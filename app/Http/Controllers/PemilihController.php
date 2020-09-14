@@ -39,7 +39,7 @@ class PemilihController extends Controller
     {
         $request->validate([
             'nama_pemilih'=>'required|min:3|max:100',
-            'username'=>'required|string|max:100|unique:tbl_admin',
+            'username'=>'required|string|alpha_dash|max:100|unique:tbl_admin',
             'password'=>'required|string|min:8|max:100',
         ]);
 

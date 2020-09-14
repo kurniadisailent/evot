@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="icon" type="image/png" href="{{ url('images/favicon.png') }}">
 
   <title>Page Admin</title>
 
@@ -38,7 +39,7 @@
     <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex justify-content-center" href="#">
         <div class="sidebar-brand-icon">
           <i class="fas fa-users"></i>
         </div>

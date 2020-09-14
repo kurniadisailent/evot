@@ -14,7 +14,7 @@
                   @endif
         </div>
 
-        @if(Auth::guard('pemilih')->user()->status === 'BELUM')
+        @if(Auth::guard('pemilih')->user()->status === 'BELUM MEMILIH')
        <?php $no = 1 ?>
           @foreach($data as $row)
                   <div class="col-lg-4 col-md-4 col-sm-6 mb-4">

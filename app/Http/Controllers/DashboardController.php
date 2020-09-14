@@ -13,7 +13,7 @@ class DashboardController extends Controller
         $data = Pemilih::All();
         $Pemilih = Pemilih::count();
         $S_Memilih = Pemilih::select('status')->where('status','=','MEMILIH')->count();
-        $B_Memilih = Pemilih::select('status')->where('status','=','BELUM')->count();
+        $B_Memilih = Pemilih::select('status')->where('status','=','BELUM MEMILIH')->count();
         $PS_Memilih = $S_Memilih / $Pemilih * 100;
         $PB_Memilih = $B_Memilih / $Pemilih * 100;
         $data_tabel = Calon::All();

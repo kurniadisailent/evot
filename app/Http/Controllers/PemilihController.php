@@ -14,7 +14,7 @@ class PemilihController extends Controller
      */
     public function index(Request $request)
     {
-        $data = Pemilih::where('tbl_pemilih.nama_pemilih','like',"%{$request->keyword}%")->paginate(10);
+        $data = Pemilih::where('tbl_pemilih.nama_pemilih','like',"%{$request->keyword}%")->paginate(10)->onEachSide(0);;
 
         return view('admin.pemilih.index',(['data'=>$data]));
     }
@@ -49,7 +49,7 @@ class PemilihController extends Controller
             'password'=>bcrypt($request->password),
             'jenis_kelamin'=>$request->jenis_kelamin,
             'kelas_pemilih'=>$request->kelas_pemilih,
-            'status'=>$request->status,
+            'status'=>'BELUM MEMILIH'
         ]);
 
         return redirect()->route('pemilih.index')->with('store','Berhasil disimpan!');
@@ -107,7 +107,6 @@ class PemilihController extends Controller
             'password'=>bcrypt($request->password),
             'jenis_kelamin'=>$request->jenis_kelamin,
             'kelas_pemilih'=>$request->kelas_pemilih,
-            'status'=>$request->status,
             ];
         }else {
         $query = [
@@ -115,7 +114,6 @@ class PemilihController extends Controller
             'username'=>$request->username,
             'jenis_kelamin'=>$request->jenis_kelamin,
             'kelas_pemilih'=>$request->kelas_pemilih,
-            'status'=>$request->status,
             ];
         }
         $pemilih->update($query);

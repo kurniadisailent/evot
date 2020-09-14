@@ -29,6 +29,6 @@ class PemilihanController extends Controller
         // DB::update('update tbl_calon set jumlah_suara = ? where id_calon = ?', [$jumlah_vote_akhir, $id_calon]);
         DB::table('tbl_calon')->select('jumlah_suara')->where('id_calon','=',$vote->id_calon)->increment('jumlah_suara');
 
-        return dd($vote->id_calon);
+        return redirect()->route('voting')->with('berhasil',' Berhasil Memilih !');
     }
 }

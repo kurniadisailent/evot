@@ -44,15 +44,13 @@
                         </div>
                       </div>
                        <!-- jenis -->
-                      <div class="form-group row">
-                        <label for="jenis" class="col-md-3 col-form-label col-form-label-md">Jenis Kelamin</label>
+                         <div class="form-group row">
+                        <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">Jenis Kelamin</label>
                         <div class="col-md-7">
-                          <input value="{{ old('jenis_kelamin',$data->jenis_kelamin) }}" type="text" name="jenis_kelamin" class="form-control form-control-md border @error('jenis_kelamin') is-invalid @enderror " id="colFormLabelSm" value="" placeholder="Masukan Jenis Kelamin" required>
-                          @error('jenis_kelamin')
-                              <div class="invalid-feedback">
-                                {{ $message }}
-                              </div>
-                          @enderror
+                          <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                            <option>LAKI-LAKI</option>
+                            <option>PEREMPUAN</option>
+                          </select>
                         </div>
                       </div>
 
@@ -76,17 +74,7 @@
                           <input type="Password" name="password" class="form-control form-control-md border" id="colFormLabelSm" value="" placeholder="Masukan Password" >
                         </div>
                       </div>
-                      
-                       <!-- status -->
-                      <div class="form-group row">
-                        <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">status</label>
-                        <div class="col-md-7">
-                          <select value="{{ old('status',$data->status) }}" name="status" class="form-control" id="exampleFormControlSelect1">
-                            <option>MEMILIH</option>
-                            <option>BELUM MEMILIH</option>
-                          </select>
-                        </div>
-                      </div>
+          
                       <button class="btn btn-danger px-4">submit</button>
 
                     </form>

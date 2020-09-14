@@ -42,16 +42,14 @@
                           @enderror
                         </div>
                       </div>
-                       <!-- jenis -->
-                      <div class="form-group row">
-                        <label for="jenis" class="col-md-3 col-form-label col-form-label-md">Jenis Kelamin</label>
+                      <!-- jenis -->
+                         <div class="form-group row">
+                        <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">Jenis Kelamin</label>
                         <div class="col-md-7">
-                          <input type="text" name="jenis_kelamin" class="form-control form-control-md border @error('jenis_kelamin') is-invalid @enderror " id="colFormLabelSm" value="" placeholder="Masukan Jenis Kelamin" required>
-                          @error('jenis_kelamin')
-                              <div class="invalid-feedback">
-                                {{ $message }}
-                              </div>
-                          @enderror
+                          <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                            <option>LAKI-LAKI</option>
+                            <option>PEREMPUAN</option>
+                          </select>
                         </div>
                       </div>
 
@@ -80,17 +78,7 @@
                           @enderror
                         </div>
                       </div>
-                      
-                       <!-- status -->
-                      <div class="form-group row">
-                        <label for="exampleFormControlSelect1" class="col-md-3 col-form-label col-form-label-md">status</label>
-                        <div class="col-md-7">
-                          <select name="status" class="form-control" id="exampleFormControlSelect1">
-                            <option value = "MEMILIH">MEMILIH</option>
-                            <option value = "BELUM">BELUM</option>
-                          </select>
-                        </div>
-                      </div>
+                
                       <button class="btn btn-danger px-4">submit</button>
                     </form>
                   </div>

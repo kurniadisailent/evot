@@ -21,13 +21,14 @@ class PemilihanController extends Controller
         $id_pemilih = $pemilih->id_pemilih;
         DB::update('update tbl_pemilih set status = ? where id_pemilih = ?', ["MEMILIH", $id_pemilih]);
 
-        //queryvote
-        $id_calon = $vote->id_calon;
-        $jumlah_vote_awal = Calon::select('jumlah_suara')->where('id_calon','=',$vote)->pluck('jumlah_suara')->first();
-        $jumlah_vote_akhir = $jumlah_vote_awal + 1;
+        // //queryvote
+        // $id_calon = $vote->id_calon;
+        // $jumlah_vote_awal = Calon::select('jumlah_suara')->where('id_calon','=',$vote)->pluck('jumlah_suara')->first();
+        // $jumlah_vote_akhir = $jumlah_vote_awal + 1;
         
-        DB::update('update tbl_calon set jumlah_suara = ? where id_calon = ?', [$jumlah_vote_akhir, $id_calon]);
+        // DB::update('update tbl_calon set jumlah_suara = ? where id_calon = ?', [$jumlah_vote_akhir, $id_calon]);
+        DB::table('tbl_calon')->select('jumlah_suara')->where('id_calon','=',$vote->id_calon)->increment('jumlah_suara');
 
-        return redirect()->route('voting')->with('berhasil',' Berhasil Memilih !');
+        return dd($vote->id_calon);
     }
 }
